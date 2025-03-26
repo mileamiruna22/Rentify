@@ -1,11 +1,16 @@
-async function loadHeaderFooter() {
-    const headerResponse = await fetch('header.html');
-    const headerHtml = await headerResponse.text();
-    document.querySelector('header').outerHTML = headerHtml;
+document.addEventListener('DOMContentLoaded', function() {
+    // Încarcă header-ul
+    fetch('../HTML/header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+        });
 
-    const footerResponse = await fetch('footer.html');
-    const footerHtml = await footerResponse.text();
-    document.querySelector('footer').outerHTML = footerHtml;
-}
+    // Încarcă footer-ul
+    fetch('../HTML/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+        });
 
-loadHeaderFooter();
+});

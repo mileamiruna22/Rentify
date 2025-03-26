@@ -1,151 +1,69 @@
 body {
-    margin: 0;
     font-family: 'Arial', sans-serif;
-    color: white;
+    background-color: white;
 }
 
-#hero {
+.hero {
     position: relative;
-    height: 100vh;
-    overflow: hidden;
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
 }
 
-#hero-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: 1;
-}
-
-#hero-video {
+.hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    background: rgba(0,0,0,0.5);
 }
 
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    z-index: 2;
-    background-color: rgba(0, 0, 0, 0.5); /* Background transparent */
-}
-
-header .logo {
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-header nav ul {
-    list-style: none;
-    display: flex;
-}
-
-header nav ul li {
-    margin-left: 20px;
-}
-
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-header .user-icon img {
-    width: 30px;
-    height: 30px;
-}
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 85px;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    z-index: 1000;
-    color: white;
-}
-
-.menu {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.menu::before {
-    content: "";
-    display: inline-block;
-    width: 24px;
-    height: 2px;
-    background-color: white;
-    margin-right: 10px;
+.hero-content {
     position: relative;
+    z-index: 2;
+    color: white;
 }
 
-.menu::after {
-    content: "";
-    display: inline-block;
-    width: 24px;
-    height: 2px;
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.read-more {
+    background-color: #ffd700;
+    color: black;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 25px;
+}
+
+.cars-section {
     background-color: white;
-    position: absolute;
-    left: 20px;
-    transform: translateY(6px);
+    padding: 100px 0;
 }
 
-#iconRentify {
-    height: 40px;
-    display: block;
-    margin: 0 auto;
+.car-card {
+    border: 1px solid #e0e0e0;
+    text-align: center;
+    transition: transform 0.3s ease;
 }
 
-.icon {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+.car-card:hover {
+    transform: scale(1.05);
 }
 
-#iconLogin {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    cursor: pointer;
+.car-card img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: contain;
 }
 
-/* For the full-width background image that appears behind the header */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-image: url('your-background-image.jpg'); /* Replace with your image path */
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
+.car-label {
+    background-color: #ffd700;
+    color: black;
+    padding: 10px;
+    font-weight: bold;
 }
